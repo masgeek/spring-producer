@@ -16,7 +16,7 @@ class CustomMessageSender(private val rabbitTemplate: RabbitTemplate) {
         private val log = LoggerFactory.getLogger(CustomMessageSender::class.java)
     }
 
-    @Scheduled(fixedDelay = 300L)
+    @Scheduled(fixedDelay = 3000L)
     fun sendMessage() {
         val message = CustomMessage("Hello there!", Random().nextInt(50), false)
         log.info("Sending message...")
