@@ -20,6 +20,6 @@ class CustomMessageSender(private val rabbitTemplate: RabbitTemplate) {
     fun sendMessage() {
         val message = CustomMessage("Hello there!", Random().nextInt(50), false)
         log.info("Sending message...")
-        rabbitTemplate.convertAndSend(ProducerServiceApplication.EXCHANGE_NAME, ProducerServiceApplication.ROUTING_KEY, message)
+        rabbitTemplate.convertAndSend(ProducerServiceApplication.EXCHANGE_NAME, ProducerServiceApplication.ROUTING_KEY, message.toString())
     }
 }

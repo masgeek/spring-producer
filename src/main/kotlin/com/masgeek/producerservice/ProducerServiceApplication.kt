@@ -24,10 +24,6 @@ class ProducerServiceApplication {
         val QUEUE_GENERIC_NAME = "appGenericQueue"
         val QUEUE_SPECIFIC_NAME = "appSpecificQueue"
         val ROUTING_KEY = "messages.key"
-
-        val topicExchangeName = "spring-boot-exchange"
-
-        val queueName = "spring-boot"
     }
 
 
